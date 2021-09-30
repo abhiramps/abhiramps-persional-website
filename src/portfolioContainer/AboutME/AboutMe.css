@@ -1,0 +1,89 @@
+.aboutme{
+    position: relative;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 .5rem 0 0.5rem; */
+}
+.aboutContents{
+    position: relative;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutContents .heading{
+    
+}
+.aboutContents .heading h2{
+    text-align: center;
+    color: rgb(255, 145, 0);
+    user-select: none;
+}
+.aboutContents .description{
+    position: relative;
+    top: 1rem;
+    width: 85%;
+}
+.aboutContents .description p{
+    width: 100%;
+    text-align: center;
+    color: #ffffff80; 
+}
+.skills{
+    position: relative;
+    top: 1rem;
+}
+.skills h2{
+    text-align: center;
+    color: rgb(255, 145, 0);
+}
+.skills .badges{
+/* display: flex; */
+}
+.skills .badges .item{
+
+}
+@media screen and (min-width:300px ){
+    .skills{
+        position: relative;
+        top: 2rem;
+    }
+}
+@media screen and (min-width:370px ){
+
+}
+
+@media screen and (min-width:426px ){
+
+}
+@media screen and (min-width:570px ){
+    .aboutme{
+       
+    }
+}
+@media screen and (min-width:730px ){
+    .aboutme{
+        display: flex;
+        flex-direction: row;
+    }
+    .aboutContents .description p{
+        font-size: 1.2rem;
+    }
+    .skills{
+        position: relative;
+        top: 1rem;
+    }
+
+}
+@media screen and (min-width:900px ){
+    .aboutContents .description p{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width:1100px ){
+    
+}
+@media screen and (min-width:1200px ){
+
+}
