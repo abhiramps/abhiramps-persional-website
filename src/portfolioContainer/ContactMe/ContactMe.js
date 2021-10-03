@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
+// import NavBar from '../NavBar/NavBar'
 import { Row, Col, Container } from "react-bootstrap";
 import './ContactMe.css'
 export default function ContactMe() {
     return (
         <div>
-            <NavBar></NavBar>
+            {/* <NavBar></NavBar> */}
             <Container>
                 <Row className='contact'>
                     <Col md={6} className='contactDetails'>
@@ -13,8 +13,8 @@ export default function ContactMe() {
                         <div className='contactDetailsDescription'>
                             Let's Get In Touch
                             Hit me up if you have some question or want to work together
-                            Email me at <a href='#'>abhiramps776@gmail.com </a>
-                            or Contact me at <a href='#'>+971564451682</a>
+                            Email me at <span style={{color:'blue'}}>abhiramps776@gmail.com </span>
+                            or Contact me at <span style={{color:'blue'}}>+971564451682</span>
                         </div>
                     </Col>
                     <Col md={6} className='socialmedia'>
@@ -26,7 +26,7 @@ export default function ContactMe() {
                             <a href='https://www.instagram.com/abhi.ram_46/'>
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href='#'>
+                            <a href='https://twitter.com'>
                                 <i class="fab fa-twitter-square"></i>
                             </a>
                             <a href='https://github.com/abhiramps'>

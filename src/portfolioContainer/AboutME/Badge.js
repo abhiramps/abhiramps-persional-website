@@ -4,7 +4,7 @@ function BadgeItem(props) {
     return (
         <div className='badge col-2'>
             <div className='badgecontents'>
-                <img src={props.Url}></img>
+                <img alt='skills' src={props.Url}></img>
                 <h5>{props.skill}</h5>
             </div> 
         </div>

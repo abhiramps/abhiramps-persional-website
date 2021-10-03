@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import { Form, Row, Col,Container } from 'react-bootstrap'
+import { Form, Row, Col,Container,Button } from 'react-bootstrap'
 // import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact';
 import NavBar from '../NavBar/NavBar'
-import { MDBBtn } from 'mdb-react-ui-kit';
+// import { MDBBtn } from 'mdb-react-ui-kit';
 import emailjs from 'emailjs-com';
 
 function HireMe() {
@@ -43,9 +43,12 @@ function HireMe() {
                                 <Form.Control as="textarea" className='bg-dark text-white' name='message' rows={3} />
                             </Form.Group>
                             <Form.Group className="mb-3 d-flex align-items-center justify-content-center">
-                                <MDBBtn className='MDBBtn' >
+                                {/* <MDBBtn className='MDBBtn' >
                                     submit
-                                </MDBBtn>
+                                </MDBBtn> */}
+                                <Button type='submit'>
+                                    submit
+                                </Button>
                             </Form.Group>
                         </Form>
                     </Col>

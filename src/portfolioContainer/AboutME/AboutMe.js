@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import NavBar from '../NavBar/NavBar';
+// import NavBar from '../NavBar/NavBar';
 import { Col, Container, Row } from 'react-bootstrap';
 import './AboutMe.css'
 import BadgeItem from './Badge'
 function AboutMe() {
 
-    const [SkillSet, setSkillSet] = useState([
+    const [SkillSet] = useState([
         {
             skillName: 'ReactJs',
             imgUrl: 'assets/react-js.png'
@@ -38,7 +38,7 @@ function AboutMe() {
 
     return (
         <div>
-            <NavBar></NavBar>
+            {/* <NavBar></NavBar> */}
             <Container fluid className='d-flex'>
                 <Row className='aboutme'>
                     <Col sm={6} className='aboutContents'>

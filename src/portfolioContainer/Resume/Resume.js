@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
+// import NavBar from '../NavBar/NavBar'
 import './Resume.css'
 import myResume from './Abhiramps_resume.pdf'
 
@@ -7,7 +7,7 @@ function Resume() {
 
     return (
         <div >
-            <NavBar></NavBar>
+            {/* <NavBar></NavBar> */}
             <div className='resume container'>
                 <label>You can download the Resume from here!</label>
                 
