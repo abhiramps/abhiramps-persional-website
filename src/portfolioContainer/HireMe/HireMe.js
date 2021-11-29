@@ -1,9 +1,8 @@
 import React, { useRef } from 'react'
 import { Form, Row, Col,Container,Button } from 'react-bootstrap'
-// import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact';
 import NavBar from '../NavBar/NavBar'
-// import { MDBBtn } from 'mdb-react-ui-kit';
 import emailjs from 'emailjs-com';
+import './HireMe.css'
 
 function HireMe() {
     const form = useRef();
@@ -20,13 +19,11 @@ function HireMe() {
     };
 
     return (
-        <div>
+        <div className='hireme'>
             <NavBar></NavBar>
             <Container>
                 <Row style={{ position: 'relative', top: '3rem' }}>
-                    <Col md={3}>
-                    </Col>
-
+                    <Col md={3}></Col>
                     <Col md={6}>
                         <label className='text-white-50' style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>please fill the Form and I'll try to get back to you as soon as I can.</label>
                         <Form className='form' ref={form} onSubmit={sendEmail}>
@@ -43,17 +40,13 @@ function HireMe() {
                                 <Form.Control as="textarea" className='bg-dark text-white' name='message' rows={3} />
                             </Form.Group>
                             <Form.Group className="mb-3 d-flex align-items-center justify-content-center">
-                                {/* <MDBBtn className='MDBBtn' >
-                                    submit
-                                </MDBBtn> */}
-                                <Button type='submit'>
+                                <Button type='submit' className='px-5'>
                                     submit
                                 </Button>
                             </Form.Group>
                         </Form>
                     </Col>
-                    <Col md={3}>
-                    </Col>
+                    <Col md={3}></Col>
 
                 </Row>
             </Container>

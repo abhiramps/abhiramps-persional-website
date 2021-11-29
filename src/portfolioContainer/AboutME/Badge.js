@@ -2,13 +2,11 @@ import React from 'react'
 import './Badge.css'
 function BadgeItem(props) {
     return (
-        <div className='badge col-2'>
-            <div className='badgecontents'>
-                <img alt='skills' src={props.Url}></img>
-                <h5>{props.skill}</h5>
-            </div> 
+        <div className='badgecontents d-flex flex-column align-items-center justify-content-center'>
+            <img alt='skills' src={props.Url} className='' />
+            <label className='pt-3 pt-sm-2 text-uppercase fw-normal'>{props.skill}</label>
         </div>
     )
 }
- 
+
 export default BadgeItem

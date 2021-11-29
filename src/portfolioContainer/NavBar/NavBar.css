@@ -18,11 +18,8 @@ nav ul li{
     text-decoration: none;
 }
 nav ul .brand{
-    /* background-color: rgb(189, 189, 199); */
     position: relative;
-    /* left: 1rem; */
     font-size: 2rem;
-    /* width: 150px; */
     font-family: 'Bebas Neue', cursive;
 }
 nav ul .brand a{ 

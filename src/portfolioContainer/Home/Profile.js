@@ -1,57 +1,41 @@
 import React from 'react'
 import Typical from 'react-typical'
 import './Profile.css'
-// import { MDBBtn } from 'mdb-react-ui-kit';
-// import NavBar from '../NavBar/NavBar'
 import { Link } from 'react-router-dom';
 import myResume from '../Resume/Abhiramps_resume.pdf'
-import { Button, Container } from 'react-bootstrap';
-// import { useState } from 'react';
+import { Button, Container, Col, Row } from 'react-bootstrap';
 export default function Profile() {
-    // const [state, setstate] = useState({
-    //     show: false
-    // })
 
     return (
-        <div className="profile-container">
-            {/* <NavBar></NavBar> */}
+        <div className="text-white">
             <Container>
-                <div className='main'>
-                    <div className='contents'>
-                        <span>Hello,I'm <label> Abhiram</label></span>
-                        <Typical className='designation'
+                <Row className='main'>
+                    <Col sm={6} className='col-12 contents d-flex flex-column align-items-center justify-content-center'>
+                        <span className='text-center fs-1 w-100 pt-4'>Hello,I'm <label className='text-danger'>Abhiram</label></span>
+                        
+                        <Typical className='designation fs-4'
+                            // style={{color:'orange'}}
                             loop={Infinity}
                             steps={['ReactJs Dev ', 1000, 'MERN STACK Developer', 1000, ' cross platform ', 1000, 'Enthusiastic Dev ', 1000]}
                         />
-                        <div className='discription'>
-                            <h6>Knack of building applications with front and back end operations.</h6>
-                        </div>
+                        <label className='text-center pt-3 pb-sm-5 pb-4 fs-5'>Knack of building applications with front and back end operations.</label>
 
-                        <div className='buttons'>
+                        <div className='buttons d-flex flex-row align-items-center justify-content-around pb-5'>
                             <Link className='hireme-link' to='/hireme'>
-                                <Button size='sm' className='hireme-link-btn' variant="outline-primary" > Hire me </Button>
+                                <Button size='sm' className='hireme-link-btn rounded-pill px-4 me-sm-2 py-2 text-uppercase' variant="outline-primary" > Hire me </Button>
                             </Link>
-
                             <a className='get-resume' href={myResume} download="Abhiramps_resume">
-                                <Button size='sm' className='get-resume-btn' variant="primary" >
+                                <Button size='sm' className='get-resume-btn rounded-pill px-4 py-2 text-uppercase' variant="primary" >
                                     Get Resume
                                 </Button>
                             </a>
-
-                            {/* <MDBBtn className='MDBBtn' outline rounded>
-                            <Link style={{background:'none'}} className='link' to='/hireme'> Hire me</Link>
-                        </MDBBtn>
-                        <MDBBtn className='MDBBtn' rounded>
-                            <a style={{background:'none',color:'white'}} href={myResume} download="Abhiramps_resume">
-                                Get Resume
-                            </a>
-                        </MDBBtn> */}
                         </div>
-                    </div>
-                    <div className='image'>
-                        <img src='assets/imgnew1.png' alt='banner'/>
-                    </div>
-                </div>
+                    </Col>
+
+                    <Col sm={6} className='col-12 image'>
+                        <img src='assets/imgnew1.png' alt='banner' className='' />
+                    </Col>
+                </Row>
             </Container>
 
 

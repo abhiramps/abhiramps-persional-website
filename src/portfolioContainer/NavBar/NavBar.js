@@ -27,29 +27,21 @@ function NavBar() {
     }
 
     const [state, dispatch] = useReducer(reducer, initialState);
-
-    // const isActive={
-    //     color:'blue'
-    // }
-
-    // const notActive={
-    //     color:'none'
-    // }
     return (
         <nav>
-            <ul>
-                <li className='brand'>
-                    <a><Link style={state.profile ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'PROFILE' })} to='/profile'>ABHIRAM P S</Link></a>
+            <ul className=''>
+                <li className='brand '>
+                    <Link className='text-decoration-none' style={state.profile ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'PROFILE' })} to='/profile'>ABHIRAM P S</Link>
                 </li>
                 <li className='list'>
                     <li className='listItems'>
-                        <a> <Link style={state.resume ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'RESUME' })} to='/resume'>Resume</Link> </a>
+                        <Link className='text-decoration-none' style={state.resume ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'RESUME' })} to='/resume'>Resume</Link>
                     </li>
                     <li className='listItems'>
-                        <a><Link style={state.about ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'ABOUT' })} to='/about'>About</Link></a>
+                        <Link className='text-decoration-none' style={state.about ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'ABOUT' })} to='/about'>About</Link>
                     </li>
                     <li className='listItems'>
-                        <a><Link style={state.contact ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'CONTACT' })} to='/contact'>contact</Link></a>
+                        <Link className='text-decoration-none' style={state.contact ? { color: 'blue' } : { color: 'white' }} onClick={() => dispatch({ type: 'CONTACT' })} to='/contact'>contact</Link>
                     </li>
                 </li>
             </ul>
