@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { Form, Row, Col,Container,Button } from 'react-bootstrap'
-import NavBar from '../NavBar/NavBar'
 import emailjs from 'emailjs-com';
 import './HireMe.css'
 
@@ -20,7 +19,6 @@ function HireMe() {
 
     return (
         <div className='hireme'>
-            <NavBar></NavBar>
             <Container>
                 <Row style={{ position: 'relative', top: '3rem' }}>
                     <Col md={3}></Col>

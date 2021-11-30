@@ -4,7 +4,8 @@
     font-family: 'Gemunu Libre', sans-serif;
 }
 .image img{
-    width: 100%;
+    width: 90%;
+    /* height: 500px; */
 }
 .designation{
     color: orange;
