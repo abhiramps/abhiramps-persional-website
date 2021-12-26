@@ -1,0 +1,49 @@
+@import './custom.scss';
+
+// //tabs
+.react-tabs {
+    display: flex;
+    width: 100%;
+    color: white;
+    padding: 2rem 0 0 0;
+}
+
+.react-tabs__tab-list {
+    display: flex;
+    flex-direction: column;
+    color: rgb(124, 124, 124);
+}
+
+.react-tabs__tab {
+    height: 40px;
+    list-style: none;
+    cursor: pointer;
+    color: rgb(24, 22, 22);
+}
+
+.react-tabs__tab--selected {
+    background: #ED9902;
+    color: white;
+}
+
+.react-tabs__tab-panel {
+    display: none;
+    width: 100%;
+    color: black;
+}
+
+.react-tabs__tab-panel--selected {
+    display: block;
+}
+
+.react-tabs__tab {
+    padding-left: 24px;
+}
+
+.react-tabs__tab--selected {
+    // padding-left: 21px;
+}
+
+.panel-content {
+    // text-align: center;
+}
