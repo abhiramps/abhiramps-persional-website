@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             <footer className="py-4 bg-gray-800">
-                <div className="container-sm">
+                <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-md-6">
                             <p className="text-white mb-0">© 2020 All rights reserved. Designed by Abhiram.</p>

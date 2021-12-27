@@ -2,27 +2,32 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  
   // prefix: 'tw-',
-   important: true,
+  important: true,
   theme: {
+    // container: {
+    //   padding: {
+
+    //     DEFAULT: '1rem',
+    //     sm: '2rem',
+    //     lg: '4rem',
+    //     xl: '5rem',
+    //     '2xl': '6rem',
+    //   },
+    // },
     container: {
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
-      },
+      padding: '1rem'
     },
     screens: {
       sm: '480px',
-      sm_l:'600px',
+      sm_l: '600px',
       md: '768px',
       lg: '976px',
       xl: '1440px',
     },
-    
-  
+
+
     extend: {
       colors: {
         brown: {
@@ -41,14 +46,14 @@ module.exports = {
         primary: '#5c6ac4',
         secondary: '#ecc94b',
         dark1: '#21201E',
-        brand:'#ED9902'
+        brand: '#ED9902'
       }
     },
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
-      'display': ['rubik','sans-serif'],
+      'display': ['rubik', 'sans-serif'],
       'body': ['"Open Sans"'],
     },
   },

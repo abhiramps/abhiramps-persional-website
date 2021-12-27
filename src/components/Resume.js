@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import '../App.scss'
+import ScrollAnimation from 'react-animate-on-scroll';
+
 const Resume = () => {
     const [state] = useState([
         {
@@ -61,201 +63,212 @@ const Resume = () => {
     const [tabList] = useState([
         {
             listitem: 'education',
-            icon:'fa-user-graduate'
+            icon: 'fa-user-graduate'
         },
         {
             listitem: 'work history',
-            icon:'fa-history'
+            icon: 'fa-history'
         },
         {
             listitem: 'programming skills',
-            icon:'fa-laptop-code'
+            icon: 'fa-laptop-code'
         },
         {
             listitem: 'projects',
-            icon:'fa-tasks'
+            icon: 'fa-tasks'
         },
         {
             listitem: 'interests',
-            icon:'fa-futbol'
+            icon: 'fa-futbol'
         }
     ])
 
 
 
     return (
-        <section id='resume' className='font-display pt-[5rem]  container-sm'>
+        <section id='resume' className='font-display mx-auto  pt-[5rem] container'>
             <div className='flex flex-col justify-center items-center '>
                 <span className='text-4xl uppercase font-bold pb-4'>Resume</span>
                 <span className='capitalize	font-light tracking-widest'>my normal bio details</span>
             </div>
 
-            <Tabs className='container-sm react-tabs grid grid-cols-12 justify-around sm:px-0 sm:justify-around'>
-                <TabList className='col-span-12 md:col-span-4 w-[100%] shadow-[0px_5px_5px_-3px_rgba(0,0,0,0.3)]  sm:w-auto min-w-[20%] 
+            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                <Tabs className='container react-tabs grid grid-cols-12 justify-around sm:px-0 sm:justify-around'>
+                    <TabList className='col-span-12 md:col-span-4 w-[100%] shadow-[0px_5px_5px_-3px_rgba(0,0,0,0.3)]  sm:w-auto min-w-[20%] 
                     md:shadow-[4px_0px_4px_-3px_rgba(0,0,0,0.3)] '>
-                    {
-                        tabList.map(item => (
-                            <Tab className='react-tabs__tab-list py-4 rounded-r-full mr-1 ease-in-out duration-200 lg:py-5'>
-                                <div className='text-md lg:text-lg'>
-                                    <i className={`fas ${item.icon} ml-1 sm:ml-2`} ></i>
-                                    <span className='pl-1 sm:pl-4'>{item.listitem}</span>
-                                </div>
-                            </Tab>
-                        ))
-                    }
-                </TabList>
-
-                <TabPanel className='container-sm col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
-                    <div className="panel-content">
-                        <ul className='list-disc'>
-                            {
-                                state.map(item => (
-                                    <li className='text-brand'>
-                                        <div className='flex justify-between flex-row p-1 md:my-4'>
-                                            <div className='pb-3'>
-                                                <span className='capitalize font-bold text-md 
+                        {
+                            tabList.map(item => (
+                                <Tab className='react-tabs__tab-list py-4 rounded-r-full mr-1 ease-in-out duration-200 lg:py-5'>
+                                    <div className='text-md lg:text-lg'>
+                                        <i className={`fas ${item.icon} ml-1 sm:ml-2`} ></i>
+                                        <span className='pl-1 sm:pl-4'>{item.listitem}</span>
+                                    </div>
+                                </Tab>
+                            ))
+                        }
+                    </TabList>
+                    <TabPanel className='container col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
+                        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                            <div className="panel-content">
+                                <ul className='list-disc'>
+                                    {
+                                        state.map(item => (
+                                            <li className='text-brand'>
+                                                <div className='flex justify-between flex-row p-1 md:my-4'>
+                                                    <div className='pb-3'>
+                                                        <span className='capitalize font-bold text-md 
                                                     leading-3 sm:text-md md:text-lg lg:text-xl'>
-                                                    {item.school}
-                                                </span>
-                                                <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
+                                                            {item.school}
+                                                        </span>
+                                                        <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
                                                 sm:mt-3 md:text-sm lg:text-md'>
-                                                    {item.course}
-                                                </p>
-                                            </div>
-                                            <label className='self-start py-1 text-md px-4 mb-2
+                                                            {item.course}
+                                                        </p>
+                                                    </div>
+                                                    <label className='self-start py-1 text-md px-4 mb-2
                                                 rounded-full text-white  bg-brand flex-none
                                                 sm:py-2 sm:px-3 md:text-md md:py-3 md:px-4 
                                                 lg:text-lg'>
-                                                {item.year}
-                                            </label>
+                                                        {item.year}
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        ))
+                                    }
+
+                                </ul>
+                            </div>
+                        </ScrollAnimation>
+                    </TabPanel>
+
+                    <TabPanel className='container col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
+                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                        <div className="panel-content">
+                            <ul className='list-disc'>
+                                <li className='text-brand'>
+                                    <div className='flex flex-row justify-between p-1 md:my-4'>
+                                        <div className='pb-3'>
+                                            <span className='capitalize font-bold text-md 
+                                        leading-3 sm:text-md md:text-lg lg:text-xl'>
+                                                enfin technologies
+                                            </span>
+                                            <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
+                                            sm:mt-3 md:text-sm lg:text-md'>
+                                                full stack developer</p>
                                         </div>
-                                    </li>
-                                ))
-                            }
-
-                        </ul>
-                    </div>
-                </TabPanel>
-
-                <TabPanel className='container-sm col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
-                    <div className="panel-content">
-                        <ul className='list-disc'>
-                            <li className='text-brand'>
-                                <div className='flex flex-row justify-between p-1 md:my-4'>
-                                    <div className='pb-3'>
-                                        <span className='capitalize font-bold text-md 
-                                        leading-3 sm:text-md md:text-lg lg:text-xl'>
-                                            enfin technologies
-                                        </span>
-                                        <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
-                                            sm:mt-3 md:text-sm lg:text-md'>
-                                            full stack developer</p>
-                                    </div>
-                                    <label className='self-start py-1 text-md px-4 mb-2
+                                        <label className='self-start py-1 text-md px-4 mb-2
                                         rounded-full text-white  bg-brand flex-none
                                         sm:py-2 sm:px-3 md:text-md md:py-3 md:px-4 
                                         lg:text-lg'>
-                                        2021-
-                                    </label>
-                                </div>
-                            </li>
-                            <li className='text-brand'>
-                                <div className='flex flex-row justify-between p-1 md:my-4'>
-                                    <div className='pb-3'>
-                                        <span className='capitalize font-bold text-md 
-                                        leading-3 sm:text-md md:text-lg lg:text-xl'>
-                                            luminar technolab</span>
-                                        <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
-                                            sm:mt-3 md:text-sm lg:text-md'>
-                                            software developer trainee</p>
+                                            2021-
+                                        </label>
                                     </div>
-                                    <label className='self-start py-1 text-md px-4 mb-2
-                                        rounded-full text-white  bg-brand flex-none
-                                        sm:py-2 sm:px-3 md:text-md md:py-3 md:px-4 
-                                        lg:text-lg'>
-                                        2020-2021
-                                    </label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </TabPanel>
-
-                <TabPanel className='container-sm col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
-                    <div className="panel-content my-5 md:my-5 md:flex  md:justify-start">
-                        <ul className='list-disc w-[100%] lg:w-[90%] grid grid-cols-12 gap-3 md:gap-6 lg:gap-x-10'>
-                            {
-                                Skills.map(item => (
-                                    <li className='text-brand col-span-12  sm:col-span-6 md:col-span-6 lg:py-2'>
-                                        <div className='flex justify-between sm:justify-around  md:justify-between'>
-                                            <span className='lg:text-xl md:font-bold capitalize flex-none'>{item.skills}</span>
-                                            <ul className="flex  px-1 ">
-                                                {
-                                                    Array(item.rating).fill().map((_, i) => (
-
-                                                        <li className=''>
-                                                            <i className="fas fa-star fa-sm text-yellow-500 mr-1"></i>
-                                                        </li>
-                                                    ))
-                                                }
-
-                                            </ul>
+                                </li>
+                                <li className='text-brand'>
+                                    <div className='flex flex-row justify-between p-1 md:my-4'>
+                                        <div className='pb-3'>
+                                            <span className='capitalize font-bold text-md 
+                                        leading-3 sm:text-md md:text-lg lg:text-xl'>
+                                                luminar technolab</span>
+                                            <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
+                                            sm:mt-3 md:text-sm lg:text-md'>
+                                                software developer trainee</p>
                                         </div>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                    </div>
-                </TabPanel>
-
-                <TabPanel className='container-sm col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
-                    <div className="panel-content py-2">
-                        <ul className='list-disc'>
-                            <li className='text-brand'>
-                                <div className='flex flex-row justify-between p-1 md:my-4'>
-                                    <div className='pb-3'>
-                                        <span className='capitalize font-bold text-md 
-                                        leading-3 sm:text-md md:text-lg lg:text-xl'>
-                                            secure ehr using blockchain
-                                        </span>
-                                        <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
-                                            sm:mt-3 md:text-sm lg:text-md'>
-                                            final year collage project
-                                        </p>
-                                    </div>
-                                    <label className='self-start py-1 text-md px-4 mb-2
+                                        <label className='self-start py-1 text-md px-4 mb-2
                                         rounded-full text-white  bg-brand flex-none
                                         sm:py-2 sm:px-3 md:text-md md:py-3 md:px-4 
                                         lg:text-lg'>
-                                        4 months(2020)
-                                    </label>
-                                </div>
-                            </li>
+                                            2020-2021
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        </ScrollAnimation>
+                    </TabPanel>
 
-                        </ul>
-                    </div>
-                </TabPanel>
+                    <TabPanel className='container col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
+                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                        <div className="panel-content my-5 md:my-5 md:flex  md:justify-start">
+                            <ul className='list-disc w-[100%] lg:w-[90%] grid grid-cols-12 gap-3 md:gap-6 lg:gap-x-10'>
+                                {
+                                    Skills.map(item => (
+                                        <li className='text-brand col-span-12  sm:col-span-6 md:col-span-6 lg:py-2'>
+                                            <div className='flex justify-between sm:justify-around  md:justify-between'>
+                                                <span className='lg:text-xl md:font-bold capitalize flex-none'>{item.skills}</span>
+                                                <ul className="flex  px-1 ">
+                                                    {
+                                                        Array(item.rating).fill().map((_, i) => (
 
-                <TabPanel className='container-sm col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
-                    <div className="panel-content">
-                        <ul className='list-disc text-brand  sm:py-4'>
-                            <li className=' py-1 md:my-2'>
-                                <span className='lg:text-xl md:font-bold capitalize flex-none'>stock market</span>
-                            </li>
-                            <li className=' py-1 md:my-2'>
-                                <span className=' lg:text-xl md:font-bold capitalize flex-none'>crypto trading</span>
-                            </li>
-                            <li className=' py-1 md:my-2'>
-                                <span className='lg:text-xl md:font-bold capitalize flex-none'>football</span>
-                            </li>
-                            <li className=' py-1 md:my-2'>
-                                <span className=' lg:text-xl md:font-bold capitalize flex-none'>cricket</span>
-                            </li>
-                        </ul>
-                    </div>
-                </TabPanel>
+                                                            <li className=''>
+                                                                <i className="fas fa-star fa-sm text-yellow-500 mr-1"></i>
+                                                            </li>
+                                                        ))
+                                                    }
 
-            </Tabs>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                        </ScrollAnimation>
+                    </TabPanel>
+
+                    <TabPanel className='container col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
+                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                        <div className="panel-content py-2">
+                            <ul className='list-disc'>
+                                <li className='text-brand'>
+                                    <div className='flex flex-row justify-between p-1 md:my-4'>
+                                        <div className='pb-3'>
+                                            <span className='capitalize font-bold text-md 
+                                        leading-3 sm:text-md md:text-lg lg:text-xl'>
+                                                secure ehr using blockchain
+                                            </span>
+                                            <p className='text-gray-600 uppercase text-xs font-extralight mt-1 
+                                            sm:mt-3 md:text-sm lg:text-md'>
+                                                final year collage project
+                                            </p>
+                                        </div>
+                                        <label className='self-start py-1 text-md px-4 mb-2
+                                        rounded-full text-white  bg-brand flex-none
+                                        sm:py-2 sm:px-3 md:text-md md:py-3 md:px-4 
+                                        lg:text-lg'>
+                                            4 months(2020)
+                                        </label>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        </ScrollAnimation>
+                    </TabPanel>
+
+                    <TabPanel className='container col-span-12 md:col-span-8 react-tabs__tab-panel mt-10 ml-2 md:ml-5 md:mt-0'>
+                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                        <div className="panel-content">
+                            <ul className='list-disc text-brand  sm:py-4'>
+                                <li className=' py-1 md:my-2'>
+                                    <span className='lg:text-xl md:font-bold capitalize flex-none'>stock market</span>
+                                </li>
+                                <li className=' py-1 md:my-2'>
+                                    <span className=' lg:text-xl md:font-bold capitalize flex-none'>crypto trading</span>
+                                </li>
+                                <li className=' py-1 md:my-2'>
+                                    <span className='lg:text-xl md:font-bold capitalize flex-none'>football</span>
+                                </li>
+                                <li className=' py-1 md:my-2'>
+                                    <span className=' lg:text-xl md:font-bold capitalize flex-none'>cricket</span>
+                                </li>
+                            </ul>
+                        </div>
+                        </ScrollAnimation>
+                    </TabPanel>
+
+                </Tabs>
+            </ScrollAnimation>
         </section>
     )
 }

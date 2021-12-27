@@ -7,16 +7,18 @@ import NavBar from './components/NavBar';
 import Resume from './components/Resume';
 
 
+
 function App() {
   return (
-    <div >
+   <>
       <NavBar />
       <Main />
       <About />
       <Resume />
       <Contact />
-      <Footer/>
-    </div>
+      <Footer />
+
+   </>
   );
 }
 
