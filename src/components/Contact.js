@@ -4,20 +4,28 @@ import emailjs from 'emailjs-com';
 // import mail from '../assets/img/mail.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
 
+import Swal from 'sweetalert2';
 const Contact = () => {
 
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
-
+       
         emailjs.sendForm('gmail', 'template_84kxoro', form.current, 'user_FJUXaGo5NtVXLwhQLoeRz')
             .then((result) => {
                 console.log(result.text);
+                Swal.fire(
+                    'Good job!',
+                    'form submited sucessfully',
+                    'success'
+                )
             }, (error) => {
                 console.log(error.text);
             });
         e.target.reset()
     };
+
+    
 
     return (
         <section id="contactme" className='font-display container mx-auto py-[5rem]'>
