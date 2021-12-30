@@ -90,7 +90,7 @@ const Main = () => {
                             </div>
 
                             <img src={person} alt="person"
-                                className='person-img mx-auto w-[250px] h-[250px] object-cover  outline outline-8 outline-brand 
+                                className=' mx-auto w-[250px] h-[250px] object-cover rounded-full border-8 border-brand 
                                         sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px]  xl:mx-0 '
 
                             />
