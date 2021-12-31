@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 
 import person from '../assets/img/abhi.jpeg'
 
@@ -10,9 +10,9 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { Container, Button, Link } from 'react-floating-action-button'
 
 import Swal from 'sweetalert2';
+// import useDarkMode from '../DarkMode/useDarkMode';
 
 const FloatingBtn = () => {
-
     return (
 
         <Container className='z-10 mr-2 text-lg  bottom-0 right-0 '>
@@ -64,7 +64,6 @@ const Main = () => {
     //     });
     // };
 
-
     const getResume = () => {
         Swal.fire(
             'Thank you😃!',
@@ -75,8 +74,8 @@ const Main = () => {
 
     return (
         <>
-            <section id="home" className='relative bg-gray-800 h-[100vh]'>
-                <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut"
+            <section id="home" className='relative bg-gray-800 dark:bg-dark1 h-[100vh] transition duration-500 '>
+                <ScrollAnimation animateIn="fadeIn" 
                     className=" max-w-[1440px] px-[1rem] mx-auto font-display text-white items-center 
                     grid grid-cols-12  gap-y-10 relative top-[5rem] sm:top-[8rem] lg:top-[9rem]
                     md:px-[2rem] lg:px-[4rem]">
@@ -133,6 +132,7 @@ const Main = () => {
                     </button>
                 )} */}
             </section>
+            {/* <hr className='bg-gray-900' /> */}
         </>
     )
 }

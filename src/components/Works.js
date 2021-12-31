@@ -9,14 +9,14 @@ import tailwindcss from '../assets/img/tailwind-css.svg'
 const Works = () => {
     return (
         <>
-            <section id="works">
+            <section id="works" className='dark:bg-dark1 dark:text-white transition duration-500 '>
                 <div className="container font-display mx-auto pt-[5rem]">
                     <div className='flex flex-col justify-center items-center '>
                         <span className='uppercase text-4xl font-bold pb-4'>my works</span>
                         <span className='capitalize	font-light tracking-widest'>checkout my works</span>
                     </div>
 
-                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                    <ScrollAnimation animateIn="fadeIn" >
                         <div className="max-w-6xl mx-auto px-5 py-24 ">
                             <div className="flex flex-wrap -m-4">
                                 <div className="xl:w-1/3 md:w-1/2 p-4 w-96">
