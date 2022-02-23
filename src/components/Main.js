@@ -140,6 +140,8 @@ const Main = () => {
                 href="#contactme"
                 className="bg-brand font-display items-center hover:bg-brand-700 text-neutral-700 
                                     font-bold py-3 px-4  rounded xl:py-4 xl:px-4 lg:mr-5"
+                data-splitbee-event="hireme Button click"
+                data-splitbee-event-planType="event"
               >
                 Hire me
               </a>
@@ -150,6 +152,8 @@ const Main = () => {
                                         hover:border-gray-800 hover:text-neutral-700 transition duration-300 delay-150 hover:delay-0  
                                         font-bold py-3 px-3 rounded xl:py-4 xl:px-4"
                 onClick={getResume}
+                data-splitbee-event="resume Button click"
+                data-splitbee-event-planType="event"
               >
                 Get Resume
               </a>
