@@ -1,5 +1,6 @@
 {
-  "name": "tailwind-demo",
+  "name": "abhiramps.io",
+  "author": "Abhiram ps <abhiramps776@gmail.com>",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
